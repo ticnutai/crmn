@@ -1,0 +1,460 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global RTL Support */
+html {
+  direction: rtl;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Default RTL for all elements */
+* {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Table RTL Support */
+table {
+  direction: rtl;
+  text-align: right;
+}
+
+table th, 
+table td {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* List RTL Support */
+ul, ol {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Form elements RTL */
+input, 
+textarea, 
+select {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Button RTL */
+button {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Flexbox RTL adjustments */
+.flex {
+  direction: rtl;
+}
+
+/* Grid RTL adjustments */
+.grid {
+  direction: rtl;
+}
+
+/* Override for specific elements that should be LTR */
+input[type="email"], 
+input[type="url"], 
+input[type="tel"],
+.ltr {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Card and container RTL */
+.card,
+.container,
+.content {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Additional RTL utilities */
+.rtl-text {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* Specific component RTL fixes */
+[data-radix-collection-item] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Popover and dropdown RTL */
+[data-radix-popper-content-wrapper] {
+  direction: rtl;
+}
+
+/* Select and dropdown items */
+[role="option"],
+[role="menuitem"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Badge and small components */
+.badge {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Table cell specific RTL */
+.table-cell-rtl {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Force RTL for all table elements */
+[role="table"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[role="row"] {
+  direction: rtl;
+}
+
+[role="columnheader"],
+[role="cell"] {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Sidebar and navigation RTL */
+nav, 
+.sidebar {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Modal and dialog RTL */
+.modal,
+.dialog {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Toast notifications RTL */
+.toast {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Custom table RTL class */
+.rtl-table {
+  direction: rtl;
+  text-align: right;
+}
+
+.rtl-table th,
+.rtl-table td {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Utility classes for text alignment */
+.text-right-rtl {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+.text-left-ltr {
+  text-align: left !important;
+  direction: ltr !important;
+}
+
+/* Theme Variables */
+:root {
+  --color-primary: hsl(214, 95%, 57%);
+  --color-secondary: hsl(265, 69%, 64%);
+  --color-accent: hsl(330, 78%, 60%);
+  --color-background: hsl(210, 40%, 98%);
+  --color-surface: hsl(0, 0%, 100%);
+  --color-text: hsl(222, 84%, 5%);
+  --color-muted: hsl(215, 16%, 47%);
+}
+
+/* Default Theme */
+.theme-default {
+  --color-primary: hsl(214, 95%, 57%);
+  --color-secondary: hsl(265, 69%, 64%);
+  --color-accent: hsl(330, 78%, 60%);
+  --color-background: hsl(210, 40%, 98%);
+  --color-surface: hsl(0, 0%, 100%);
+  --color-text: hsl(222, 84%, 5%);
+  --color-muted: hsl(215, 16%, 47%);
+}
+
+/* Luxury Gold Theme */
+.theme-luxury-gold {
+  --color-primary: hsl(29, 92%, 42%);
+  --color-secondary: hsl(35, 74%, 28%);
+  --color-accent: hsl(44, 96%, 47%);
+  --color-background: hsl(48, 100%, 96%);
+  --color-surface: hsl(0, 0%, 100%);
+  --color-text: hsl(24, 33%, 14%);
+  --color-muted: hsl(25, 20%, 47%);
+}
+
+.theme-luxury-gold .bg-gradient-to-r.from-blue-500.to-purple-600 {
+  background: linear-gradient(to right, hsl(29, 92%, 42%), hsl(35, 74%, 28%)) !important;
+}
+
+.theme-luxury-gold .bg-gradient-to-r.from-purple-500.to-pink-600 {
+  background: linear-gradient(to right, hsl(44, 96%, 47%), hsl(29, 92%, 42%)) !important;
+}
+
+.theme-luxury-gold .bg-gradient-to-br.from-blue-50.to-indigo-100 {
+  background: linear-gradient(to bottom right, hsl(48, 100%, 96%), hsl(47, 87%, 86%)) !important;
+}
+
+.theme-luxury-gold .text-blue-600 {
+  color: hsl(29, 92%, 42%) !important;
+}
+
+.theme-luxury-gold .text-purple-600 {
+  color: hsl(35, 74%, 28%) !important;
+}
+
+.theme-luxury-gold .border-blue-200 {
+  border-color: hsl(46, 87%, 77%) !important;
+}
+
+.theme-luxury-gold .border-purple-200 {
+  border-color: hsl(45, 78%, 82%) !important;
+}
+
+/* Elegant Dark Theme */
+.theme-elegant-dark {
+  --color-primary: hsl(215, 16%, 47%);
+  --color-secondary: hsl(215, 28%, 17%);
+  --color-accent: hsl(217, 12%, 63%);
+  --color-background: hsl(220, 14%, 96%);
+  --color-surface: hsl(0, 0%, 100%);
+  --color-text: hsl(224, 71%, 4%);
+  --color-muted: hsl(215, 16%, 47%);
+}
+
+.theme-elegant-dark .bg-gradient-to-r.from-blue-500.to-purple-600 {
+  background: linear-gradient(to right, hsl(215, 16%, 47%), hsl(215, 28%, 17%)) !important;
+}
+
+.theme-elegant-dark .bg-gradient-to-r.from-purple-500.to-pink-600 {
+  background: linear-gradient(to right, hsl(217, 12%, 63%), hsl(215, 16%, 47%)) !important;
+}
+
+.theme-elegant-dark .bg-gradient-to-br.from-blue-50.to-indigo-100 {
+  background: linear-gradient(to bottom right, hsl(220, 14%, 96%), hsl(214, 32%, 91%)) !important;
+}
+
+.theme-elegant-dark .text-blue-600 {
+  color: hsl(215, 16%, 47%) !important;
+}
+
+.theme-elegant-dark .text-purple-600 {
+  color: hsl(215, 28%, 17%) !important;
+}
+
+.theme-elegant-dark .border-blue-200 {
+  border-color: hsl(214, 32%, 91%) !important;
+}
+
+.theme-elegant-dark .border-purple-200 {
+  border-color: hsl(220, 13%, 91%) !important;
+}
+
+/* Base Colors */
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  /* תמיכה בעברית RTL */
+  [dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+  }
+
+  [dir="rtl"] .text-right {
+    text-align: right;
+  }
+
+  [dir="rtl"] .text-left {
+    text-align: left;
+  }
+
+  [dir="rtl"] .justify-end {
+    justify-content: flex-end;
+  }
+
+  [dir="rtl"] .justify-start {
+    justify-content: flex-start;
+  }
+
+  [dir="rtl"] .items-end {
+    align-items: flex-end;
+  }
+
+  [dir="rtl"] .items-start {
+    align-items: flex-start;
+  }
+
+  /* טבלאות RTL */
+  [dir="rtl"] table {
+    direction: rtl;
+  }
+
+  [dir="rtl"] th,
+  [dir="rtl"] td {
+    text-align: right;
+  }
+
+  /* כפתורים RTL */
+  [dir="rtl"] .btn-icon {
+    flex-direction: row-reverse;
+  }
+
+  /* רשימות RTL */
+  [dir="rtl"] ul,
+  [dir="rtl"] ol {
+    padding-right: 0;
+    padding-left: 1.5rem;
+  }
+
+  /* אייקונים RTL */
+  [dir="rtl"] .icon-left {
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+
+  [dir="rtl"] .icon-right {
+    margin-right: 0.5rem;
+    margin-left: 0;
+  }
+
+  /* אנימציות RTL */
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOutRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  [dir="rtl"] .slide-in {
+    animation: slideInRight 0.3s ease-out;
+  }
+
+  [dir="rtl"] .slide-out {
+    animation: slideOutRight 0.3s ease-out;
+  }
+
+  /* Custom transitions and animations */
+  .card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Draggable Dialog Styles */
+  .draggable-dialog {
+    user-select: none;
+    z-index: 1000;
+  }
+  
+  .dialog-drag-handle {
+    user-select: none;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .dialog-drag-handle:active {
+    cursor: move !important;
+    background: linear-gradient(to right, #3b82f6, #6366f1) !important;
+  }
+  
+  .dialog-drag-handle:hover {
+    background: linear-gradient(to right, #dbeafe, #e0e7ff) !important;
+  }
+}

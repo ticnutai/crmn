@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="ניהול לקוחות" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="ניהול לקוחות" />
+    <title>מערכת ניהול לקוחות</title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="description" content="Advanced client management system with time tracking" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <style>
+      /* Mobile optimizations */
+      @media (max-width: 768px) {
+        .sidebar { width: 100% !important; }
+        .main-content { margin-right: 0 !important; }
+        .floating-timer { bottom: 80px !important; }
+        .floating-settings { bottom: 20px !important; }
+      }
+      /* Touch-friendly sizing */
+      @media (pointer: coarse) {
+        button { min-height: 44px; min-width: 44px; }
+        input, select { min-height: 44px; }
+      }
+      /* Prevent zoom on form inputs */
+      input[type="text"], 
+      input[type="email"], 
+      input[type="tel"], 
+      select, 
+      textarea { 
+        font-size: 16px !important; 
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+
+  </body>
+</html>
